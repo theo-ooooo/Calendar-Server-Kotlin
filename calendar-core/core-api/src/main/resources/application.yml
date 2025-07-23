@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: calendar
+  config:
+    import:
+      - db-core.yml
+      - redis.yml

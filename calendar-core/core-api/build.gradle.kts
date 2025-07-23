@@ -22,9 +22,9 @@ dependencies {
     implementation(project(":calendar-supports:swagger"))
 
     runtimeOnly(project(":calendar-storage:db-core"))
-//    runtimeOnly(project(":calendar-storage:redis"))
+    runtimeOnly(project(":calendar-storage:redis"))
 
     testImplementation(libs.spring.boot.starter.test)
     testImplementation(project(":calendar-storage:db-core"))
-//    testImplementation(project(":calendar-storage:redis"))
+    testImplementation(project(":calendar-storage:redis"))
 }

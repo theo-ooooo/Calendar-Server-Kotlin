@@ -16,9 +16,20 @@ dependencyResolutionManagement {
 
 rootProject.name = "calendar"
 
-include("calendar-core:core-api")
-include("calendar-core:core-domain")
-include("calendar-storage:db-core")
-include("calendar-storage:redis")
-include("calendar-supports:swagger")
-include("calendar-client:oauth-client")
+include(
+    "calendar-core:core-api",
+    "calendar-core:core-domain"
+)
+
+include(
+    "calendar-storage:db-core",
+    "calendar-storage:redis"
+)
+
+include(
+    "calendar-supports:swagger"
+)
+
+include(
+    "calendar-client:oauth-client"
+)
