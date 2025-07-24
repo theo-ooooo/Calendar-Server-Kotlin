@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 
 @FeignClient(value = "kakao-auth-api", url = "https://kapi.kakao.com")
-internal interface KaKaoApi {
+internal interface KaKaoUserApi {
 
     @RequestMapping(
         method = [RequestMethod.GET],

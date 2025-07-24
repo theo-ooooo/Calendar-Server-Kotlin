@@ -5,3 +5,8 @@ spring:
     import:
       - db-core.yml
       - redis.yml
+      - oauth.yml
+  security:
+    user:
+      name: user
+      password: 1234

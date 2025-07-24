@@ -31,5 +31,5 @@ include(
 )
 
 include(
-    "calendar-client:oauth-client"
+    "calendar-clients:oauth-client"
 )

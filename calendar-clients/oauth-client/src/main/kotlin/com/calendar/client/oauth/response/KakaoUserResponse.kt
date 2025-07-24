@@ -10,8 +10,8 @@ data class KakaoUserResponse(
     @field:JsonProperty("kakao_account")
     val kakaoAccount: KakaoAccount,
 ) {
-    fun toResult(): KakaoClientResult =
-        KakaoClientResult(
+    fun toResult(): KakaoClientResult.KakaoUserInfo =
+        KakaoClientResult.KakaoUserInfo(
             id = id,
             email = kakaoAccount.email ?: "",
         )
