@@ -26,7 +26,7 @@ class SecurityConfig {
             .exceptionHandling { it.authenticationEntryPoint(CustomAuthenticationEntryPoint(objectMapper)) }
 
         http.authorizeHttpRequests { authorize ->
-            authorize.anyRequest().permitAll()
+            authorize.anyRequest().authenticated()
         }
 
         return http.build()

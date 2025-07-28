@@ -1,8 +1,8 @@
 package com.calendar.storage.db.core.user
 
-import com.calendar.user.User
-import com.calendar.user.UserProvider
-import com.calendar.user.UserRepository
+import com.calendar.domain.user.User
+import com.calendar.domain.user.UserProvider
+import com.calendar.domain.user.UserRepository
 import org.springframework.stereotype.Repository
 
 @Repository

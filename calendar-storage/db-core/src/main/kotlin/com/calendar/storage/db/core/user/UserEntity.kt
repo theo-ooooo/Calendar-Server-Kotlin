@@ -1,8 +1,8 @@
 package com.calendar.storage.db.core.user
 
 import com.calendar.storage.db.core.support.BaseEntity
-import com.calendar.user.User
-import com.calendar.user.UserProvider
+import com.calendar.domain.user.User
+import com.calendar.domain.user.UserProvider
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.EnumType

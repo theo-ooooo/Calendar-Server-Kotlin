@@ -1,4 +1,4 @@
-package com.calendar.user
+package com.calendar.domain.user
 
 import org.springframework.stereotype.Component
 
