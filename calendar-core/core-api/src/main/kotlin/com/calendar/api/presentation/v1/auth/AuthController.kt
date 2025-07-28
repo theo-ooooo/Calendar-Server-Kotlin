@@ -1,8 +1,8 @@
-package com.calendar.presentation.v1.auth
+package com.calendar.api.presentation.v1.auth
 
 import com.calendar.client.oauth.OAuthService
 import com.calendar.client.oauth.config.KakaoProperties
-import com.calendar.presentation.v1.annotation.ApiV1Controller
+import com.calendar.api.presentation.v1.annotation.ApiV1Controller
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.GetMapping

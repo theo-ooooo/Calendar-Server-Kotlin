@@ -1,4 +1,4 @@
-package com.calendar.presentation.v1.annotation
+package com.calendar.api.presentation.v1.annotation
 
 import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.RequestMapping
