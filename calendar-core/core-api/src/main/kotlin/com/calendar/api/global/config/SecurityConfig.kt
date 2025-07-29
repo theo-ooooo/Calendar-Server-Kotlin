@@ -37,6 +37,14 @@ class SecurityConfig {
             .exceptionHandling { it.authenticationEntryPoint(CustomAuthenticationEntryPoint(objectMapper)) }
 
         http.authorizeHttpRequests { authorize ->
+            authorize
+                .requestMatchers(
+                    "/api/v1/auth/**",
+                ).permitAll()
+
+            // 추가로 열어줄 API
+            authorize.requestMatchers("/h2-console/**", "/actuator/**", "/ping").permitAll()
+
             authorize.anyRequest().authenticated()
         }
 
