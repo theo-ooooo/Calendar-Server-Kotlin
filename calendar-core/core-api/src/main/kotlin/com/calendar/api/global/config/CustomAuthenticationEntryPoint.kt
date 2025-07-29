@@ -3,6 +3,7 @@ package com.calendar.api.global.config
 import com.calendar.api.global.dto.ApiResponse
 import com.calendar.api.global.dto.ErrorResponse
 import com.calendar.domain.global.exception.ErrorType
+import com.calendar.domain.global.exception.logger
 import com.fasterxml.jackson.databind.ObjectMapper
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
@@ -15,10 +16,13 @@ import org.springframework.security.web.AuthenticationEntryPoint
 class CustomAuthenticationEntryPoint(
     private val objectMapper: ObjectMapper
 ): AuthenticationEntryPoint {
+    companion object {
+        private val log by logger()
+    }
     override fun commence(
         request: HttpServletRequest,
         response: HttpServletResponse,
-        authException: AuthenticationException?
+        authException: AuthenticationException
     ) {
         with(response) {
             status = HttpStatus.UNAUTHORIZED.value()
