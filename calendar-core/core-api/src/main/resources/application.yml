@@ -6,7 +6,5 @@ spring:
       - db-core.yml
       - redis.yml
       - oauth.yml
-  security:
-    user:
-      name: user
-      password: 1234
+      - rsa.yml
+      - authentication.yml

@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository
 class UserCoreRepository(
     private val userJpaRepository: UserJpaRepository
 ): UserRepository {
-    override fun findByUidAndProvider(uid: String, socialType: SocialType): User.Info {
-        return userJpaRepository.findByUidAndProvider(uid, socialType).toUser()
+    override fun findByUidAndSocialType(uid: String, socialType: SocialType): User.Info {
+        return userJpaRepository.findByUidAndSocialType(uid, socialType).toUser()
     }
 
     override fun create(
