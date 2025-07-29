@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service
 class UserService(
     private val userReader: UserReader
 ) {
-    fun findByUidAndProvider(uid: String, provider: UserProvider): User.Info = userReader.readByUidAndProvider(uid, provider)
+    fun findByUidAndProvider(uid: String, socialType: SocialType): User.Info = userReader.readByUidAndProvider(uid, socialType)
 }

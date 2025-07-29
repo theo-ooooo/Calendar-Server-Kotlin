@@ -5,14 +5,19 @@ import java.time.LocalDateTime
 class User {
     data class Create (
         val uid: String,
-        val provider: UserProvider,
+        val socialType: SocialType,
         val email: String?,
         val nickname: String?
     )
 
+    data class CreateUserKey(
+        val key: String,
+    )
+
     data class Info(
         val id: Long,
-        val provider: UserProvider,
+        val userKey: String,
+        val socialType: SocialType,
         val email: String?,
         val nickname: String?,
         val createdAt: LocalDateTime,

@@ -1,5 +1,5 @@
 package com.calendar.domain.user
 
-enum class UserProvider {
+enum class SocialType {
     KAKAO
 }
