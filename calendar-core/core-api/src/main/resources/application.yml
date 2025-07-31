@@ -5,3 +5,6 @@ spring:
     import:
       - db-core.yml
       - redis.yml
+      - oauth.yml
+      - rsa.yml
+      - authentication.yml

@@ -20,6 +20,7 @@ dependencies {
 
     implementation(project(":calendar-core:core-domain"))
     implementation(project(":calendar-supports:swagger"))
+    implementation(project(":calendar-clients:oauth-client"))
 
     runtimeOnly(project(":calendar-storage:db-core"))
     runtimeOnly(project(":calendar-storage:redis"))
