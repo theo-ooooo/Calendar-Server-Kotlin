@@ -5,5 +5,5 @@ import com.linecorp.kotlinjdsl.support.spring.data.jpa.repository.KotlinJdslJpql
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface UserJpaRepository : JpaRepository<UserEntity, Long>, KotlinJdslJpqlExecutor {
-    fun findByUidAndSocialType(uid: String, socialType: SocialType): UserEntity
+    fun readByUidAndSocialType(uid: String, socialType: SocialType): UserEntity?
 }

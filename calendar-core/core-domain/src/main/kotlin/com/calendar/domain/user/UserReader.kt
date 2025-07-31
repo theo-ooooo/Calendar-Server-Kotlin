@@ -7,5 +7,5 @@ class UserReader(
     private val userRepository: UserRepository
 ) {
 
-    fun readByUidAndSocialType(uid: String, socialType: SocialType): User.Info = userRepository.findByUidAndSocialType(uid, socialType)
+    fun readByUidAndSocialType(uid: String, socialType: SocialType): User.Info? = userRepository.readByUidAndSocialType(uid, socialType)
 }

@@ -66,6 +66,12 @@ class JwtProvider(
 
     override fun renew(refreshToken: String): Token {
         val jwt = validateToken(refreshToken)
+        val tokenType = jwt.claims["type"]?.toString()
+
+        if(tokenType?.uppercase() == "A") {
+            throw ErrorException(ErrorType.INVALID_TOKEN)
+        }
+
         val tokenWithAuthentication = redisTokenRepository.findByToken(jwt.tokenValue)
         removeTokens(tokenWithAuthentication.accessToken, tokenWithAuthentication.refreshToken)
 
